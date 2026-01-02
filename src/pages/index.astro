@@ -1,16 +1,47 @@
 ---
+import "../global.css";
+let languages = ["JavaScript", "TypeScript", "Python", "Go", "C", "C++", "SQL"];
+let frameworks = ["Astro", "React", "React Native", "Redux", "D3.js"];
+let backend = ["Node.js", "Express.js", "Django", "FastAPI"];
+let databases = ["MySQL", "MongoDB", "Cassandra", "SQLite", "BoltDB"];
+let tools = ["Docker", "Kubernetes"];
+let others = ["Git", "Postman", "Figma"];
+let blockchain = ["Hedera", "Stablecoins"];
+let misc = ["Expo"];
 
+const groups = [languages, frameworks, backend, databases, tools, others, blockchain, misc];
+const skillsText = groups.map((group) => group.join(", ")).join("\n");
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Himank Suiwala</title>
+  </head>
+  <body>
+    <header class="thick-header">
+      <h1 class="lekton-regular">Himank Suiwala</h1>
+    </header>
+
+    <main class="content-body">
+      <div class="skills-text lekton-regular">
+        {skillsText}
+      </div>
+    </main>
+
+    <footer class="footer-inverted">
+      <div class="footer-content lekton-regular">
+        <span>© 2026 Himank Suiwala</span>
+      </div>
+    </footer>
+  </body>
 </html>
